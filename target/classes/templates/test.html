@@ -18,15 +18,15 @@
     <table class="table">
         <thead class="thead-dark">
         <tr>
-            <th scope="col">地区</th>
-            <th scope="col">现有确诊</th>
-            <th scope="col">累计确诊</th>
-            <th scope="col">治愈</th>
-            <th scope="col">死亡</th>
+            <th scope="col" class="">地区</th>
+            <th scope="col" class="">现有确诊</th>
+            <th scope="col" class="">累计确诊</th>
+            <th scope="col" class="">治愈</th>
+            <th scope="col" class="">死亡</th>
         </tr>
         </thead>
-        <tbody th:each="data:${areaTree}">
-        <tr>
+        <tbody >
+        <tr th:each="data:${areaTree}">
             <td th:text="${data.name}">0</td>
             <td th:text="${data.nowConfirm}">0</td>
             <td th:text="${data.confirm}">0</td>

@@ -25,8 +25,8 @@
             <th scope="col" class="">死亡</th>
         </tr>
         </thead>
-        <tbody th:each="data:${areaTree}">
-        <tr>
+        <tbody >
+        <tr th:each="data:${areaTree}">
             <td th:text="${data.name}">0</td>
             <td th:text="${data.nowConfirm}">0</td>
             <td th:text="${data.confirm}">0</td>

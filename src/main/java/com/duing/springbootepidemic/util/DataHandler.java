@@ -1,29 +1,43 @@
-package com.duing.springbootepidemic.controller;
+package com.duing.springbootepidemic.util;
 
 import com.duing.springbootepidemic.domain.DataSource;
 import com.google.gson.Gson;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.stereotype.Component;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 
-@Controller
-public class TestController {
 
-    @RequestMapping("/test")
-    public String test(Model model) throws IOException {
+@Component("dataHandler")
+public class DataHandler {
+
+
+
+    public ArrayList<DataSource> getDataSource(){
+
+        //读取文件中的json数据
         StringBuilder str = new StringBuilder();
-        FileReader fr = new FileReader("temp.json");
-        char[] c = new char[1024];
-        int length = 0;
-        while((length=fr.read(c))>0){
-            str.append(new String(c,0,length));
+        FileReader fr =null;
+        try{
+            fr = new FileReader("temp.json");
+            char[] c = new char[1024];
+            int length = 0;
+            while((length=fr.read(c))>0){
+                str.append(new String(c,0,length));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            try {
+                if(fr!=null)
+                fr.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
+
         //解析json
         Gson gson = new Gson();
         Map map = gson.fromJson(str.toString(),Map.class);
@@ -50,12 +64,9 @@ public class TestController {
             double dead = (Double) totalMap.get("dead");
             resultList.add(new DataSource(areaName,(int)nowConfirm,(int)confirm,(int)heal,(int)dead)) ;
         }
-        model.addAttribute("areaTree",resultList);
-        return "test.html";
 
+        return resultList;
     }
-
-
 
 
 }
