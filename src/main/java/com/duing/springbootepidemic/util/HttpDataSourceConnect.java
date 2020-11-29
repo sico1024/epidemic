@@ -7,6 +7,9 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * 原生类 实现http请求拿到请求数据
+ */
 public class HttpDataSourceConnect {
 
     public static String HttpConnectDataSource(String urlStr){
@@ -64,7 +67,6 @@ public class HttpDataSourceConnect {
                 e.printStackTrace();
             }
         }
-
 
         return result.toString();
     }

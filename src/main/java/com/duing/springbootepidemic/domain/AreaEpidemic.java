@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DataSource {
+public class AreaEpidemic {
     private String name;
     private int nowConfirm;
     private int confirm;
