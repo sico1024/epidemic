@@ -1,17 +1,22 @@
 package com.duing.springbootepidemic.domain;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.*;
+
+import java.io.Serializable;
 
 @Data
+@Getter@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class AreaEpidemic {
+@TableName("area_epidemic")
+public class AreaEpidemic implements Serializable {
+
+    private Long id;
     private String name;
-    private int nowConfirm;
-    private int confirm;
-    private int heal;
-    private int dead;;
+    private Integer nowConfirm;
+    private Integer confirm;
+    private Integer heal;
+    private Integer dead;;
 }

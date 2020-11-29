@@ -1,35 +1,76 @@
-package com.duing.springbootepidemic.util;
+package com.duing.springbootepidemic.handler;
 
 import com.duing.springbootepidemic.domain.AreaEpidemic;
+import com.duing.springbootepidemic.service.AreaEpidemicService;
+import com.duing.springbootepidemic.util.HttpDataSourceConnect;
 import com.google.gson.Gson;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import java.awt.geom.Area;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
 
-@Component("dataHandler")
-public class DataHandler {
+@Component("areaEpidemicHandler")
+public class AreaEpidemicHandler {
+
+    //处理日期格式
+    private static final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     //处理json字符串对象
     private Gson gson = new Gson();
 
+    //获取数据的地址
+    private String jsonUrl = "https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5";
+    private String htmlUrl = "https://ncov.dxy.cn/ncovh5/view/pneumonia";
 
-    public ArrayList<AreaEpidemic> getDataSource(String method , String url){
+    //service
+    @Autowired
+    private AreaEpidemicService service;
 
+    //初始化数据库方法
+    @PostConstruct
+    public void initDataBase(){
+        System.out.println(new Date()+" --- [初始化数据]");
+        List<AreaEpidemic> data = getDataSource();
+
+        service.remove(null);
+
+        service.saveBatch(data);
+
+    }
+
+    @Scheduled(cron = "0 0/1 * * * ? ")
+    public void updateDataBase(){
+        System.out.println(new Date()+" --- [更新数据]");
+
+        List<AreaEpidemic> data = getDataSource();
+        service.remove(null);
+        service.saveBatch(data);
+    }
+
+    //更新数据方法
+
+    public ArrayList<AreaEpidemic> getDataSource(){
         ArrayList<AreaEpidemic> result = null;
-        if("json".equals(method)) {
-            //模拟http请求 拿到数据
-            String jsonData = HttpDataSourceConnect.HttpConnectDataSource(url);
+        //模拟http请求 拿到数据
+        String data = HttpDataSourceConnect.HttpConnectDataSource(jsonUrl);
+
+        if(data==null || "".equals(data)) {//如果再Tencent没有拿到 就拿丁香医生的数据
+            result = handlerHtmlDataSource(htmlUrl);
+        }else {
             //处理json数据
-            result = handlerJsonDataSource(jsonData);
-        }else if("html".equals(method)){
-            result = handlerHtmlDataSource(url);
+            result = handlerJsonDataSource(data);
         }
 
         return result;
@@ -67,13 +108,11 @@ public class DataHandler {
             double heal = (Double) map.get("curedCount");
             double dead = (Double) map.get("deadCount");
 
-            result.add(new AreaEpidemic(name,(int)nowConfirm,(int)confirm,(int)heal,(int)dead));
+            result.add(new AreaEpidemic(null,name,(int)nowConfirm,(int)confirm,(int)heal,(int)dead));
         }
 
         return result;
     }
-
-
 
     private ArrayList<AreaEpidemic> handlerJsonDataSource(String str){
         //解析json
@@ -102,11 +141,25 @@ public class DataHandler {
             double confirm = (Double) totalMap.get("confirm");
             double heal = (Double) totalMap.get("heal");
             double dead = (Double) totalMap.get("dead");
-            resultList.add(new AreaEpidemic(areaName,(int)nowConfirm,(int)confirm,(int)heal,(int)dead)) ;
+            resultList.add(new AreaEpidemic(null,areaName,(int)nowConfirm,(int)confirm,(int)heal,(int)dead)) ;
         }
         return resultList;
     }
 
+    //传参数选择数据源
+//    public ArrayList<AreaEpidemic> getDataSource(String method ){
+//        ArrayList<AreaEpidemic> result = null;
+//        if("json".equals(method)) {
+//            //模拟http请求 拿到数据
+//            String jsonData = HttpDataSourceConnect.HttpConnectDataSource(jsonUrl);
+//            //处理json数据
+//            result = handlerJsonDataSource(jsonData);
+//        }else if("html".equals(method)){
+//            result = handlerHtmlDataSource(htmlUrl);
+//        }
+//
+//        return result;
+//    }
 
     //从文件中读取json
 //    public ArrayList<DataSource> getDataSource(){

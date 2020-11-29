@@ -6,3 +6,9 @@ spring:
     view:
       prefix: classpath:/templates/
 
+  datasource:
+    url: jdbc:mysql://localhost:3306/epidemic?useSSL=false&serverTimeZone=UTC&characterEncoding=utf8
+    username: root
+    driver-class-name: com.mysql.jdbc.Driver
+    password: root
+
