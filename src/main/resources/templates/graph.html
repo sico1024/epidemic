@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ch" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>疫情折现图</title>
+        <script type="text/javascript" src="js/echarts.min.js"></script>
+    </head>
+    <body>
+        <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+        <div id="main" style="width: 600px;height:400px;"></div>
+        <script th:inline="javascript">
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main'));
+
+            var dateList = [[${date}]];
+            var confirm = [[${confirm}]];
+            var heal = [[${heal}]];
+            var dead = [[${dead}]];
+
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: '全国累计确诊/治愈/死亡趋势'
+                },
+                tooltip: {},
+                legend: {
+                    data:['确诊','治愈','死亡']
+                },
+                xAxis: {
+                    data: JSON.parse(dateList)
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: [{
+                    name: '确诊',
+                    type: 'line',
+                    data: JSON.parse(confirm)
+                },{
+                    name: '治愈',
+                    type: 'line',
+                    data: JSON.parse(heal)
+                },{
+                    name: '死亡',
+                    type: 'line',
+                    data: JSON.parse(dead)
+                }]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
+    </body>
+</html>
