@@ -2,7 +2,7 @@
 <html lang="ch" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
-        <title>疫情折现图</title>
+        <title>境外输入条形图展示</title>
         <script type="text/javascript" src="js/echarts.min.js"></script>
     </head>
     <body>
@@ -11,45 +11,33 @@
         <script th:inline="javascript">
             // 基于准备好的dom，初始化echarts实例
             var myChart = echarts.init(document.getElementById('main'));
-
-            var dateList = [[${date}]];
-            var confirm = [[${confirm}]];
-            var heal = [[${heal}]];
-            var dead = [[${dead}]];
-
+            var nameList = [[${nameList}]];
+            var confirmList = [[${confirmList}]];
             // 指定图表的配置项和数据
             var option = {
                 title: {
-                    text: '全国累计确诊/治愈/死亡趋势'
+                    text: '境外输入省市TOP10'
                 },
                 tooltip: {
                     trigger: 'axis'
                 },
-                legend: {
-                    data:['确诊','治愈','死亡']
-                },
                 xAxis: {
-                    data: JSON.parse(dateList)
+                    data: nameList
                 },
                 yAxis: {
                     type: 'value'
                 },
                 series: [{
-                    name: '确诊',
-                    type: 'line',
-                    data: JSON.parse(confirm)
-                },{
-                    name: '治愈',
-                    type: 'line',
-                    data: JSON.parse(heal)
-                },{
-                    name: '死亡',
-                    type: 'line',
-                    data: JSON.parse(dead)
+                    name:'境外输入',
+                    type: 'bar',
+                    data: confirmList,
+                    barWidth: '60%',
+                    color: '#ff8619'
                 }]
             };
             // 使用刚指定的配置项和数据显示图表。
             myChart.setOption(option);
         </script>
+
     </body>
 </html>
