@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import javax.jws.WebParam;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 
 @Service
@@ -22,7 +23,7 @@ public class ChinaTotalGraphServiceImpl implements ChinaTotalGraphService {
     private Gson gson = new Gson();
 
 
-    public void getDataAndInitModel(Model model){
+    public void getDataAndInitModel(Map<String,List> map){
 
         ArrayList<ChinaTotalGraph> list = handler.getData();
 
@@ -40,10 +41,10 @@ public class ChinaTotalGraphServiceImpl implements ChinaTotalGraphService {
             dead.add(graph.getDead());
         }
         //存入Model之中
-        model.addAttribute("date",gson.toJson(date));
-        model.addAttribute("confirm",gson.toJson(confirm));
-        model.addAttribute("heal",gson.toJson(heal));
-        model.addAttribute("dead",gson.toJson(dead));
+        map.put("dateList",date);
+        map.put("confirmList",confirm);
+        map.put("healList",heal);
+        map.put("deadList",dead);
     }
 
 

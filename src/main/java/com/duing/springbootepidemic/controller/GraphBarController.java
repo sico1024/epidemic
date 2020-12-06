@@ -2,14 +2,15 @@ package com.duing.springbootepidemic.controller;
 
 import com.duing.springbootepidemic.domain.GraphBar;
 import com.duing.springbootepidemic.handler.GraphBarHandler;
+import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.*;
 
 @Controller
 public class GraphBarController {
@@ -18,7 +19,8 @@ public class GraphBarController {
     private GraphBarHandler graphBarHandler;
 
     @RequestMapping("/graphBar")
-    public String getOutSideInputGraphBar(Model model){
+    @ResponseBody
+    public String getOutSideInputGraphBar(){
         ArrayList<GraphBar> list = graphBarHandler.getOutSideInputData();
 
         //将集合进行排序
@@ -34,13 +36,11 @@ public class GraphBarController {
             nameList.add(bar.getName());
             confirmList.add(bar.getConfirm());
         }
+        Map<String,List> resultMap = new HashMap();
+        resultMap.put("nameList",nameList);
+        resultMap.put("confirmList",confirmList);
 
-        model.addAttribute("nameList",nameList);
-        model.addAttribute("confirmList",confirmList);
-
-        System.out.println(nameList);
-        System.out.println(confirmList);
-        return "graphBar.html";
+        return new Gson().toJson(resultMap);
     }
 
 }

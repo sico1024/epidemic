@@ -3,14 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <title>疫情折现图</title>
-        <script type="text/javascript" src="js/echarts.min.js"></script>
+        <script type="text/javascript" src="echarts/echarts.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
     </head>
     <body>
         <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
-        <div id="main" style="width: 600px;height:400px;"></div>
+        <div id="graph" style="width: 600px;height:400px;"></div>
         <script th:inline="javascript">
             // 基于准备好的dom，初始化echarts实例
-            var myChart = echarts.init(document.getElementById('main'));
+            var myChart = echarts.init(document.getElementById('graph'));
 
             var dateList = [[${date}]];
             var confirm = [[${confirm}]];
