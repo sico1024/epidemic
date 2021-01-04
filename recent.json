@@ -1,0 +1,112 @@
+{
+  "ret": 0,
+  "info": "",
+  "data": {
+    "statisGradeCityDetail": [
+      {
+        "date": "01/04",
+        "sdate": "01/04",
+        "city": "沈阳",
+        "confirm": 61,
+        "dead": 0,
+        "heal": 34,
+        "grade": "部分中风险",
+        "syear": 2021,
+        "province": "辽宁",
+        "nowConfirm": 27,
+        "confirmAdd": 6
+      },
+      {
+        "date": "01/04",
+        "province": "北京",
+        "nowConfirm": 24,
+        "confirmAdd": 2,
+        "dead": 0,
+        "sdate": "01/04",
+        "syear": 2021,
+        "city": "顺义",
+        "confirm": 34,
+        "heal": 10,
+        "grade": "部分中风险"
+      },
+      {
+        "province": "黑龙江",
+        "nowConfirm": 7,
+        "confirm": 22,
+        "grade": "部分中风险",
+        "sdate": "01/04",
+        "city": "黑河",
+        "confirmAdd": 1,
+        "dead": 0,
+        "heal": 15,
+        "date": "01/04",
+        "syear": 2021
+      },
+      {
+        "grade": "部分中风险",
+        "date": "01/04",
+        "province": "辽宁",
+        "city": "大连",
+        "nowConfirm": 47,
+        "heal": 113,
+        "syear": 2021,
+        "confirmAdd": 2,
+        "confirm": 160,
+        "dead": 0,
+        "sdate": "01/04"
+      },
+      {
+        "dead": 0,
+        "syear": 2021,
+        "nowConfirm": 1,
+        "confirmAdd": 0,
+        "confirm": 30,
+        "heal": 29,
+        "grade": "风险待公布",
+        "date": "01/04",
+        "sdate": "01/03",
+        "province": "河北",
+        "city": "石家庄"
+      },
+      {
+        "nowConfirm": 1,
+        "confirm": 8,
+        "dead": 0,
+        "grade": "全部低风险",
+        "date": "01/02",
+        "sdate": "01/01",
+        "province": "北京",
+        "city": "怀柔",
+        "syear": 2021,
+        "confirmAdd": 0,
+        "heal": 7
+      },
+      {
+        "syear": 2020,
+        "nowConfirm": 3,
+        "confirmAdd": 0,
+        "confirm": 80,
+        "heal": 77,
+        "sdate": "12/30",
+        "province": "北京",
+        "city": "朝阳",
+        "dead": 0,
+        "grade": "部分中风险",
+        "date": "12/31"
+      },
+      {
+        "syear": 2020,
+        "province": "黑龙江",
+        "nowConfirm": 3,
+        "confirm": 36,
+        "heal": 33,
+        "sdate": "12/21",
+        "city": "牡丹江",
+        "confirmAdd": 0,
+        "dead": 0,
+        "grade": "全部低风险",
+        "date": "01/03"
+      }
+    ]
+  }
+}

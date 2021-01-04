@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ch" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="css/development.css">
+</head>
+<body>
+<div class="globalwraper">
+    <div class="img">
+        <img src="img/news_head.png" alt="buzhidao" style="width: 100%">
+    </div>
+    <div class="center">
+        <div class="follow">
+            <div class="follow1">疫情追踪</div>
+            <div class="btns">
+                <div class="btns1">
+                    <img src="https://mat1.gtimg.com/news/signin/v6/zhuizong.png" alt="aa" width="180px">
+                </div>
+                <div class="btns2">
+                    <img src="https://mat1.gtimg.com/news/signin/v6/zixunmore.png" alt="bb" width="210px">
+                </div>
+            </div>
+        </div>
+        <!--下面内容的展示        -->
+        <div class="content-news" th:each="data:${newsList}">
+            <ul>
+                <li>
+                    <div class="line-center">
+                        <span class="ring"></span>
+                        <span class="time" th:text="${data.publishTime}"></span>
+                    </div>
+                    <!-- 新闻内容-->
+                    <div class="journalism">
+                        <div class="journalism-title" th:text="${data.title}">
+                        </div>
+                        <div class="journalism-content" th:text="${data.desc}">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

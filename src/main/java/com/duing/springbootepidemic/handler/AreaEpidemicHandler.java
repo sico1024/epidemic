@@ -23,7 +23,6 @@ import java.util.Map;
 
 @Component("areaEpidemicHandler")
 public class AreaEpidemicHandler {
-
     //处理日期格式
     private static final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
@@ -39,7 +38,7 @@ public class AreaEpidemicHandler {
     private AreaEpidemicService service;
 
     //初始化数据库方法
-    @PostConstruct
+//    @PostConstruct
     public void initDataBase(){
         System.out.println(new Date()+" --- [初始化数据]");
         List<AreaEpidemic> data = getDataSource();
@@ -50,7 +49,7 @@ public class AreaEpidemicHandler {
 
     }
 
-    @Scheduled(cron = "0 0/1 * * * ? ")
+//    @Scheduled(cron = "0 0/1 * * * ? ")
     public void updateDataBase(){
         System.out.println(new Date()+" --- [更新数据]");
 
@@ -82,7 +81,6 @@ public class AreaEpidemicHandler {
 //        String html = HttpDataSourceConnect.HttpConnectDataSource(url);
         //用jSoup 将获取到的数据解析成html格式的数据
 //        Document document = Jsoup.parse(html);
-
         Document document = null;
         try {
             document = Jsoup.connect(url).get();
@@ -115,6 +113,7 @@ public class AreaEpidemicHandler {
     }
 
     private ArrayList<AreaEpidemic> handlerJsonDataSource(String str){
+
         //解析json
         Map data = gson.fromJson(str,Map.class);
 

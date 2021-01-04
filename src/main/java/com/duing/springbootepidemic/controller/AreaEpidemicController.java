@@ -1,8 +1,7 @@
 package com.duing.springbootepidemic.controller;
 
-import com.duing.springbootepidemic.domain.AreaEpidemic;
-import com.duing.springbootepidemic.service.AreaEpidemicService;
-import com.duing.springbootepidemic.service.impl.AreaEpidemicServiceImpl;
+import com.duing.springbootepidemic.domain.*;
+import com.duing.springbootepidemic.handler.*;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,16 +20,25 @@ import java.util.Map;
 public class AreaEpidemicController {
 
     @Autowired
-    private AreaEpidemicServiceImpl areaEpidemicServiceImpl;
+    private AreaEpidemicHandler areaEpidemicHandler;
+
+
 
     private Gson gson = new Gson();
 
     @RequestMapping("/")
     public String chinaAreaEpidemic(Model model){
 
-        List<AreaEpidemic> resultList = areaEpidemicServiceImpl.list();
+        List<AreaEpidemic> resultList = areaEpidemicHandler.getDataSource();
         List<Map<String,Object>> confirmMap = new ArrayList<>();
         List<Map<String,Object>> nowConfirmMap = new ArrayList<>();
+        List<Development> newsList = DevelopmentHandler.getDevelopments();
+
+        List<Foreign> foreigns = ForeignHandler.getForeignData();
+
+        List<AreaHospital> hospitals = HospitalHandler.getHospitalData();
+
+        List<RecentEpidemic> recentEpidemics = RecentEpidemicHandler.getRecentData();
 
         for(int i=0;i<resultList.size();i++){
             AreaEpidemic areaEpidemic = resultList.get(i);
@@ -45,9 +53,18 @@ public class AreaEpidemicController {
             m2.put("value",areaEpidemic.getNowConfirm());
             nowConfirmMap.add(m2);
         }
+
+        EpidemicToday et = EpidemicTodayHandler.getDataSource();
+
         model.addAttribute("confirmMap",gson.toJson(confirmMap));
         model.addAttribute("nowConfirmMap",gson.toJson(nowConfirmMap));
         model.addAttribute("areaTree",resultList);
+        model.addAttribute("newsList",newsList);
+        model.addAttribute("et",et);
+        model.addAttribute("hospitals",hospitals);
+        model.addAttribute("foreign",foreigns);
+        model.addAttribute("recentEpidemics",recentEpidemics);
+
         return "epidemic.html";
 
     }

@@ -1,0 +1,654 @@
+[{
+	"city":"北京",
+	"town":[
+		{"name":"朝阳区","count":14},
+		{"name":"海定区","count":12},
+		{"name":"昌平区","count":10},
+		{"name":"丰台区","count":9},
+		{"name":"西城区","count":9},
+		{"name":"东城区","count":6},
+		{"name":"房山区","count":5},
+		{"name":"石景山区","count":4},
+		{"name":"大兴区","count":4},
+		{"name":"顺义区","count":3},
+		{"name":"通州区","count":3},
+		{"name":"平谷区","count":3},
+		{"name":"怀柔区","count":3},
+		{"name":"门头沟区","count":2},
+		{"name":"密云区","count":2},
+		{"name":"延庆区","count":1}
+
+	]
+}
+,
+{
+	"city":"天津",
+	"town":[
+		{"name":"南开区","count":4},
+		{"name":"河北区","count":4},
+		{"name":"滨海新区","count":3},
+		{"name":"河西区","count":2},
+		{"name":"北辰区","count":2},
+		{"name":"静海区","count":2},
+		{"name":"津南区","count":1},
+		{"name":"西青区","count":1},
+		{"name":"河东区","count":1},
+		{"name":"和平区","count":1},
+		{"name":"武清区","count":1},
+		{"name":"宝坻区","count":1},
+		{"name":"红桥区","count":1},
+		{"name":"宁河区","count":1},
+		{"name":"东丽区","count":1},
+		{"name":"蓟州区","count":1}
+
+	]
+}
+,
+{
+	"city":"河北",
+	"town":[
+		{"name":"石家庄","count":55},
+		{"name":"唐山","count":49},
+		{"name":"秦皇岛","count":25},
+		{"name":"邯郸","count":31},
+		{"name":"邢台","count":48},
+		{"name":"保定","count":55},
+		{"name":"张家口","count":45},
+		{"name":"承德","count":23},
+		{"name":"沧州","count":23},
+		{"name":"廊坊","count":26},
+		{"name":"衡水","count":14}
+
+
+	]
+}
+,
+{
+	"city":"山西",
+	"town":[
+		{"name":"太原","count":34},
+		{"name":"大同","count":16},
+		{"name":"阳泉","count":11},
+		{"name":"长治","count":45},
+		{"name":"晋城","count":1},
+		{"name":"朔州","count":14},
+		{"name":"晋中","count":20},
+		{"name":"运城","count":15},
+		{"name":"忻州","count":15},
+		{"name":"临汾","count":22},
+		{"name":"吕梁","count":13}
+
+
+	]
+}
+,
+{
+	"city":"内蒙古",
+	"town":[
+		{"name":"呼和浩特","count":18},
+		{"name":"包头","count":20},
+		{"name":"乌海","count":12},
+		{"name":"赤峰","count":35},
+		{"name":"通辽","count":12},
+		{"name":"鄂尔多斯","count":14},
+		{"name":"呼伦贝尔","count":30},
+		{"name":"巴彦淖尔","count":15},
+		{"name":"乌兰察布","count":19},
+		{"name":"兴安盟","count":17},
+		{"name":"锡林郭勒盟","count":12},
+		{"name":"阿拉善盟","count":9}
+	]
+}
+,
+{
+	"city":"辽宁",
+	"town":[
+		{"name":"沈阳","count":22},
+		{"name":"大连","count":28},
+		{"name":"鞍山","count":20},
+		{"name":"抚顺","count":21},
+		{"name":"本溪","count":18},
+		{"name":"丹东","count":17},
+		{"name":"锦州","count":17},
+		{"name":"营口","count":21},
+		{"name":"阜新","count":10},
+		{"name":"辽阳","count":6},
+		{"name":"盘锦","count":6},
+		{"name":"铁岭","count":13},
+		{"name":"朝阳","count":14},
+		{"name":"葫芦岛","count":15}
+	]
+}
+,
+{
+	"city":"吉林",
+	"town":[
+		{"name":"长春","count":22},
+		{"name":"吉林","count":23},
+		{"name":"四平","count":15},
+		{"name":"辽源","count":6},
+		{"name":"通化","count":14},
+		{"name":"白山","count":13},
+		{"name":"松原","count":10},
+		{"name":"白城","count":8},
+		{"name":"延边","count":11},
+		{"name":"公主岭","count":11}
+
+	]
+}
+,
+{
+	"city":"黑龙江",
+	"town":[
+		{"name":"哈尔滨","count":63},
+		{"name":"齐齐哈尔","count":68},
+		{"name":"鸡西","count":24},
+		{"name":"鹤岗","count":28},
+		{"name":"双鸭山","count":14},
+		{"name":"大庆","count":100},
+		{"name":"伊春","count":24},
+		{"name":"佳木斯","count":67},
+		{"name":"七台河","count":7},
+		{"name":"牡丹江","count":29},
+		{"name":"黑河","count":15},
+		{"name":"绥化","count":42},
+		{"name":"大兴安岭","count":12}
+
+	]
+}
+,
+{
+	"city":"上海",
+	"town":[
+		{"name":"静安区","count":4},
+		{"name":"徐汇区","count":4},
+		{"name":"奉贤区","count":3},
+		{"name":"浦东新区","count":3},
+		{"name":"闵行区","count":2},
+		{"name":"虹口区","count":2},
+		{"name":"杨浦区","count":2},
+		{"name":"黄浦区","count":2},
+		{"name":"崇明区","count":2},
+		{"name":"嘉定区","count":1},
+		{"name":"普陀区","count":1},
+		{"name":"金山区","count":1},
+		{"name":"青浦区","count":1},
+		{"name":"长宁区","count":1}
+
+	]
+}
+,
+{
+	"city":"江苏",
+	"town":[
+		{"name":"南京","count":50},
+		{"name":"无锡","count":55},
+		{"name":"徐州","count":54},
+		{"name":"常州","count":26},
+		{"name":"苏州","count":73},
+		{"name":"南通","count":49},
+		{"name":"连云港","count":14},
+		{"name":"淮安","count":125},
+		{"name":"盐城","count":106},
+		{"name":"扬州","count":21},
+		{"name":"镇江","count":16},
+		{"name":"秦州","count":21},
+		{"name":"宿迁","count":160}
+	]
+}
+,
+{
+	"city":"浙江",
+	"town":[
+		{"name":"杭州","count":48},
+		{"name":"宁波","count":49},
+		{"name":"温州","count":34},
+		{"name":"嘉兴","count":28},
+		{"name":"湖州","count":20},
+		{"name":"绍兴","count":26},
+		{"name":"金华","count":32},
+		{"name":"衢州","count":15},
+		{"name":"舟山","count":27},
+		{"name":"台州","count":25},
+		{"name":"丽水","count":19}
+
+	]
+}
+,
+{
+	"city":"安徽",
+	"town":[
+		{"name":"合肥","count":30},
+		{"name":"芜湖","count":17},
+		{"name":"蚌埠","count":15},
+		{"name":"淮南","count":14},
+		{"name":"马鞍山","count":14},
+		{"name":"淮北","count":15},
+		{"name":"铜陵","count":9},
+		{"name":"安庆","count":25},
+		{"name":"黄山","count":17},
+		{"name":"滁州","count":29},
+		{"name":"阜阳","count":27},
+		{"name":"宿州","count":11},
+		{"name":"六安","count":14},
+		{"name":"毫州","count":11},
+		{"name":"池州","count":5},
+		{"name":"宣城","count":19}
+	]
+}
+,
+{
+	"city":"福建",
+	"town":[
+		{"name":"福州","count":202},
+		{"name":"厦门","count":20},
+		{"name":"莆田","count":53},
+		{"name":"三明","count":143},
+		{"name":"泉州","count":34},
+		{"name":"漳州","count":126},
+		{"name":"南平","count":75},
+		{"name":"龙岩","count":47},
+		{"name":"宁德","count":65}
+	]
+}
+,
+{
+	"city":"江西",
+	"town":[
+		{"name":"南昌","count":26},
+		{"name":"景德镇","count":17},
+		{"name":"萍乡","count":20},
+		{"name":"九江","count":21},
+		{"name":"新余","count":12},
+		{"name":"鹰潭","count":10},
+		{"name":"赣州","count":48},
+		{"name":"吉安","count":42},
+		{"name":"宜春","count":32},
+		{"name":"抚州","count":22},
+		{"name":"上饶","count":57}
+
+	]
+}
+
+,
+{
+	"city":"山东",
+	"town":[
+		{"name":"济南","count":55},
+		{"name":"青岛","count":48},
+		{"name":"淄博","count":72},
+		{"name":"枣庄","count":21},
+		{"name":"烟台","count":65},
+		{"name":"潍坊","count":50},
+		{"name":"济宁","count":39},
+		{"name":"泰安","count":32},
+		{"name":"威海","count":21},
+		{"name":"日照","count":5},
+		{"name":"临沂","count":31},
+		{"name":"德州","count":36},
+		{"name":"聊成","count":33},
+		{"name":"菏泽","count":33}
+
+	]
+}
+
+,
+{
+	"city":"河南",
+	"town":[
+		{"name":"郑州","count":62},
+		{"name":"开封","count":27},
+		{"name":"洛阳","count":45},
+		{"name":"平顶山","count":25},
+		{"name":"安阳","count":28},
+		{"name":"鹤壁","count":13},
+		{"name":"新乡","count":33},
+		{"name":"焦作","count":30},
+		{"name":"濮阳","count":18},
+		{"name":"许昌","count":18},
+		{"name":"漯河","count":17},
+		{"name":"三门峡","count":12},
+		{"name":"南阳","count":40},
+		{"name":"商丘","count":34},
+		{"name":"信阳","count":31},
+		{"name":"周口","count":43},
+		{"name":"驻马店","count":27},
+		{"name":"济源","count":5}
+	]
+}
+
+,
+{
+	"city":"湖北",
+	"town":[
+		{"name":"武汉","count":70},
+		{"name":"黄石","count":15},
+		{"name":"十堰","count":84},
+		{"name":"宜昌","count":24},
+		{"name":"襄阳","count":98},
+		{"name":"鄂州","count":18},
+		{"name":"荆门","count":12},
+		{"name":"孝感","count":31},
+		{"name":"荆州","count":39},
+		{"name":"黄冈","count":21},
+		{"name":"咸宁","count":46},
+		{"name":"随州","count":54},
+		{"name":"恩施","count":93},
+		{"name":"仙桃","count":26},
+		{"name":"潜江","count":21},
+		{"name":"开门","count":25},
+		{"name":"神农架林区","count":1}
+	]
+}
+
+,
+{
+	"city":"湖南",
+	"town":[
+		{"name":"长沙","count":46},
+		{"name":"株洲","count":12},
+		{"name":"湘潭","count":15},
+		{"name":"衡阳","count":20},
+		{"name":"邵阳","count":23},
+		{"name":"岳阳","count":32},
+		{"name":"常德","count":38},
+		{"name":"张家界","count":3},
+		{"name":"益阳","count":18},
+		{"name":"郴州","count":26},
+		{"name":"永州","count":33},
+		{"name":"怀化","count":30},
+		{"name":"娄底","count":12},
+		{"name":"湘西","count":17}
+	]
+}
+
+,
+{
+	"city":"广东",
+	"town":[
+		{"name":"广州","count":130},
+		{"name":"韶关","count":26},
+		{"name":"深圳","count":49},
+		{"name":"珠海","count":15},
+		{"name":"汕头","count":15},
+		{"name":"佛山","count":46},
+		{"name":"江门","count":35},
+		{"name":"湛江","count":70},
+		{"name":"茂名","count":79},
+		{"name":"肇庆","count":42},
+		{"name":"惠州","count":29},
+		{"name":"梅州","count":34},
+		{"name":"汕尾","count":22},
+		{"name":"河源","count":59},
+		{"name":"阳江","count":18},
+		{"name":"清远","count":29},
+		{"name":"东莞","count":39},
+		{"name":"中山","count":27},
+		{"name":"潮州","count":35},
+		{"name":"揭阳","count":85},
+		{"name":"云浮","count":17}
+
+	]
+}
+
+,
+{
+	"city":"广西",
+	"town":[
+		{"name":"南宁","count":13},
+		{"name":"柳州","count":1},
+		{"name":"桂林","count":21},
+		{"name":"梧州","count":1},
+		{"name":"北海","count":2},
+		{"name":"防城港","count":1},
+		{"name":"软州","count":1},
+		{"name":"贵港","count":1},
+		{"name":"玉林","count":1},
+		{"name":"百色","count":5},
+		{"name":"贺州","count":1},
+		{"name":"河池","count":1},
+		{"name":"来宾","count":1},
+		{"name":"崇左","count":1}
+	]
+}
+
+,
+{
+	"city":"海南",
+	"town":[
+		{"name":"海口","count":27},
+		{"name":"三亚","count":20},
+		{"name":"三沙","count":1},
+		{"name":"儋州","count":26},
+		{"name":"五指山","count":9},
+		{"name":"琼海","count":9},
+		{"name":"文昌","count":20},
+		{"name":"万宁","count":16},
+		{"name":"东方","count":21},
+		{"name":"定安","count":15},
+		{"name":"屯昌","count":20},
+		{"name":"澄迈","count":13},
+		{"name":"临高","count":25},
+		{"name":"白沙","count":11},
+		{"name":"昌江","count":14},
+		{"name":"乐东","count":14},
+		{"name":"陵水","count":21},
+		{"name":"保亭","count":14},
+		{"name":"琼中","count":21}
+	]
+}
+
+,
+{
+	"city":"重庆",
+	"town":[
+		{"name":"万州区","count":7},
+		{"name":"渝北区","count":7},
+		{"name":"渝中区","count":6},
+		{"name":"沙坪坝区","count":6},
+		{"name":"九龙坡区","count":6},
+		{"name":"江津区","count":5},
+		{"name":"南岸区","count":5},
+		{"name":"北碚区","count":5},
+		{"name":"南川区","count":4},
+		{"name":"荣昌区","count":3},
+		{"name":"綦江区","count":3},
+		{"name":"巫山县","count":3},
+		{"name":"云阳县","count":3},
+		{"name":"忠县","count":3},
+		{"name":"垫江县","count":3},
+		{"name":"潼南区","count":3},
+		{"name":"丰都县","count":2},
+		{"name":"璧山区","count":2},
+		{"name":"涪陵区","count":2},
+		{"name":"江北区","count":2},
+		{"name":"大足区","count":2},
+		{"name":"武隆区","count":2},
+		{"name":"城口县","count":2},
+		{"name":"铜梁区","count":2},
+		{"name":"永川区","count":2},
+		{"name":"合川区","count":2},
+		{"name":"黔江区","count":2},
+		{"name":"奉节县","count":2},
+		{"name":"巴南区","count":2},
+		{"name":"酉阳土家苗族自治县","count":2},
+		{"name":"大渡口区","count":1},
+		{"name":"彭水苗族土家族自治县","count":1},
+		{"name":"巫溪县","count":1},
+		{"name":"石柱土家族自治县","count":1},
+		{"name":"秀山土家族自治县","count":1},
+		{"name":"长寿区","count":1},
+		{"name":"梁平区","count":1}
+
+	]
+}
+,
+{
+	"city": "四川",
+	"town": [
+		{"name":"成都","count":410},
+		{"name":"自贡","count":130},
+		{"name":"攀枝花","count":78},
+		{"name":"泸州","count":202},
+		{"name":"德阳","count":173},
+		{"name":"绵阳","count":331},
+		{"name":"广元","count":280},
+		{"name":"遂宁","count":138},
+		{"name":"内江","count":144},
+		{"name":"乐山","count":236},
+		{"name":"南充","count":464},
+		{"name":"眉山","count":128},
+		{"name":"宜宾","count":207},
+		{"name":"广安","count":157},
+		{"name":"达州","count":337},
+		{"name":"雅安","count":166},
+		{"name":"巴中","count":247},
+		{"name":"资阳","count":213},
+		{"name":"阿坝","count":231},
+		{"name":"甘孜","count":357},
+		{"name":"凉山","count":450}
+	]
+}
+,
+{
+	"city": "贵州",
+	"town": [
+		{"name":"贵阳","count":35},
+		{"name":"六盘水","count":61},
+		{"name":"遵义","count":227},
+		{"name":"安顺","count":89},
+		{"name":"毕节","count":40},
+		{"name":"铜仁","count":158},
+		{"name":"黔西南","count":152},
+		{"name":"黔东南","count":213},
+		{"name":"黔南","count":169}
+
+	]
+}
+,
+{
+	"city": "云南",
+	"town": [
+		{"name":"昆明","count":50},
+		{"name":"曲靖","count":27},
+		{"name":"玉溪","count":23},
+		{"name":"保山","count":17},
+		{"name":"昭通","count":24},
+		{"name":"丽江","count":14},
+		{"name":"普洱","count":21},
+		{"name":"临沧","count":15},
+		{"name":"楚雄","count":35},
+		{"name":"红河","count":29},
+		{"name":"文山","count":21},
+		{"name":"西双版纳","count":12},
+		{"name":"大理","count":37},
+		{"name":"德宏","count":16},
+		{"name":"怒江","count":7},
+		{"name":"迪庆","count":4}
+	]
+}
+,
+{
+	"city": "西藏",
+	"town": [
+		{"name":"拉萨","count":2},
+		{"name":"日咯则","count":1},
+		{"name":"昌都","count":1},
+		{"name":"林芝","count":1},
+		{"name":"山南","count":1},
+		{"name":"那曲","count":1},
+		{"name":"阿里","count":1}
+
+	]
+}
+,
+{
+	"city": "陕西",
+	"town": [
+		{"name":"西安","count":86},
+		{"name":"铜川","count":8},
+		{"name":"宝鸡","count":38},
+		{"name":"咸阳","count":58},
+		{"name":"渭南","count":31},
+		{"name":"延安","count":25},
+		{"name":"汉中","count":27},
+		{"name":"榆林","count":36},
+		{"name":"安康","count":16},
+		{"name":"商洛","count":29}
+
+	]
+}
+,
+{
+	"city": "甘肃",
+	"town": [
+		{"name":"兰州","count":12},
+		{"name":"嘉谷关","count":1},
+		{"name":"金昌","count":2},
+		{"name":"白银","count":6},
+		{"name":"天水","count":9},
+		{"name":"武威","count":5},
+		{"name":"张掖","count":7},
+		{"name":"平凉","count":8},
+		{"name":"酒泉","count":8},
+		{"name":"庆阳","count":8},
+		{"name":"定西","count":7},
+		{"name":"陇南","count":10},
+		{"name":"临夏","count":9},
+		{"name":"甘南","count":8}
+
+	]
+}
+,
+{
+	"city": "青海",
+	"town": [
+		{"name":"西宁","count":12},
+		{"name":"海东","count":15},
+		{"name":"海北","count":10},
+		{"name":"黄南","count":8},
+		{"name":"海南","count":11},
+		{"name":"果洛","count":9},
+		{"name":"玉树","count":7},
+		{"name":"海西蒙古族","count":14}
+
+	]
+}
+,
+{
+	"city": "宁夏",
+	"town": [
+		{"name":"银川","count":23},
+		{"name":"石嘴山","count":16},
+		{"name":"吴忠","count":10},
+		{"name":"固原","count":12},
+		{"name":"中卫","count":12}
+
+	]
+}
+,
+{
+	"city": "新疆",
+	"town": [
+		{"name":"乌鲁木齐","count":41},
+		{"name":"克拉玛依","count":4},
+		{"name":"吐鲁番","count":7},
+		{"name":"哈密","count":2},
+		{"name":"昌吉","count":15},
+		{"name":"博尔塔拉","count":6},
+		{"name":"巴音郭楞","count":3},
+		{"name":"阿克苏","count":17},
+		{"name":"克孜勒苏柯尔克孜","count":2},
+		{"name":"喀什","count":19},
+		{"name":"和田","count":11},
+		{"name":"伊犁","count":29},
+		{"name":"塔城","count":9},
+		{"name":"阿勒泰","count":10},
+		{"name":"石河子","count":2},
+		{"name":"北屯","count":1}
+
+	]
+}
+]
+
+
